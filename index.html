@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <header class="bg dark">
+      <h1 class="display-3">Weather App</h1>
+      <p class="lead"></p>
+      <p id="currentDay" class="lead"></p>
+      <p id="currentTime" class="clock"></p>
+    </header>
+    <main class="d-flex flex-rox">
+    <aside class="side-bar d-flex flex-column">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+          <strong>Search for a city!</strong>
+          <input id="setCity" class="search" val=""></input>
+          <button class="searchBtn">Search</button>    
+      </div>
+      <ul class="d-flex flex-column">
+        <li class="">
+          <button id="Denver" value='Denver' class="btn btn-denver"><label id="Denver" class='cityLabel' val="Denver">Denver</label>
+          </button>
+        </li>
+        <li class="">
+          <button id="London" value='London' class="btn btn-London"><label id="London" val="London" class="cityLabel">London</label>
+          </button>
+        </li>
+        <li class="">
+          <button id="Anchorage" class="btn btn-anchorage"><label id="Anchorage" class="cityLabel" val="Anchorage">Anchorage</label>
+          </button>
+        </li>
+        <li  class="">
+          <button id="Honolulu" class="btn btn-honolulu"><label id="Honolulu" class="cityLabel" val="Honolulu">Honolulu</label>
+          </button>
+        </li>
+         <li class="">
+          <button id="Rome" class="btn btn-rome"><label id="Rome" class="cityLabel" val="Rome">Rome</label>
+          </button>
+        </li>
+        <li  class="">
+          <button id="Tokyo" class="btn btn-tokyo"><label id='Tokyo' class="cityLabel" val="Tokyo">Tokyo</label>
+          </button>
+        </li>
+        <li class="">
+          <button id="Tampa" class="btn btn-tampa"><label id="Tampa" class="cityLabel" val="Tampa">Tampa</label>
+          </button>
+        </li>
+        <li class="">
+          <button id="Sydney" class="btn btn-sydney"> <label id="Sydney" class="cityLabel" val="Sydney">Sydney</label>
+          </button>
+        </li>
+      </ul>
+    </aside>
+    <section class="d-flex flex-column">
+    <div class="container d-flex flex-row justify-space-around">
+      <div class="d-flex flex-column mx-auto my-auto">
+        <div id="today"class="object"></div>
+        <p id='titleToday'class="title"></p>
+        <image id="iconToday" src='' class = "icon d-flex flex-rox justify-content-left"></image> 
+      </div> 
+      <div class="d-flex flex-column align-items-left mx-auto my-auto"> 
+            <p id='tempToday'class="temperature">Temp</p>
+            <p id="wind_speed" class="wind">Wind</p>
+            <p id="humidityToday" class="humidity">Humidity</p>
+            <p id='uvIndex'class="UV-Index">UV Index</p>
+      </div>    
+    </div>
+    <strong>5-Day Forcast:</strong>
+    <div class="d-flex container2">
+        <ol class="d-flex flex-row justify-space-around">
+            <li class="object card d-flex align-items-left jusitfy-content-left">
+              <div id="day1" ></div>
+                <ul class="d-flex flex-column align-items-left">
+                    <p id='temp1' class="temperature"></p>
+                    <p id='wind1' class="wind"></p>
+                    <p id='humidity1' class="humidity"></p>
+                    <img src='' id='icon1' class="icon"></img>
+                </ul>
+            </li>
+              
+            <li class="object card d-flex flex-column align-items-left">
+              <div id="day2" ></div>
+                <ul class="d-flex flex-column align-items-left">
+                    <p id='temp2' class="temperature"></p>
+                    <p id='wind2' class="wind"></p>
+                    <p id='humidity2' class="humidity"></p>
+                    <img id='icon2' src='' class="icon"></img>
+                </ul>
+            </li>
+            <li class="object card">
+               <div id="day3" ></div>
+                <ul class="d-flex flex-column align-items-left">
+                    <p id='temp3' class="temperature"></p>
+                    <p id='wind3' class="wind"></p>
+                    <p id='humidity3' class="humidity"></p>
+                    <img id='icon3' src="" class="icon"></img>
+                </ul>
+            </li>
+            <li class="object card" value="">
+               <div id="day4" ></div>
+                <ul class="d-flex flex-column align-items-left">
+                    <p id='temp4' class="temperature"></p>
+                    <p id='wind4' class="wind"></p>
+                    <p id='humidity4' class="humidity"></p>
+                    <img src='' id='icon4' class="icon"></p>
+                </ul>
+            </li>
+            <li class="object card">
+               <div id="day5" ></div>
+                <ul class="d-flex flex-column align-items-left"></ul>
+                   <p id='temp5' class="temperature"></p>
+                    <p id='wind5' class="wind"></p>
+                    <p id='humidity5' class="humidity"></p>
+                    <img src='' id='icon5' class="icon"></img>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    </section>
+    </main>
+  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+  
+</html>
